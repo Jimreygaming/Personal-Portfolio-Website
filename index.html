@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jim Rey Dioquino | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="logo.png" alt="Logo" width="50" height="50">
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Home -->
+  <section id="home" class="home">
+    <img src="profile.jpg" alt="Profile" class="profile" width="400">
+    
+    <div class="description">
+      <h2 class="name">Jim Rey <span>Dioquino</span></h2>
+      <p>Hi, I'm Jim, 19 years old, current student at Taguig National High School. I am passionate about Technologies and someday become a programmer.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <div class="section-title">
+      <h2>My <span>Skills</span></h2>
+    </div>
+    <div class="skills-container">
+      <div class="skill-card">
+        <img src="html-css-logo.png" alt="HTML & CSS" class="skill-icon">
+        <h3>HTML/CSS</h3>
+        <div class="progress-bar">
+          <div class="progress" data-progress="50%"></div>
+          <span class="progress-text"></span>
+        </div>
+        <p>Building <span>accessible</span> websites</p>
+      </div>
+      
+      <div class="skill-card">
+        <img src="javascript.png" alt="JavaScript" class="skill-icon">
+        <h3>JavaScript</h3>
+        <div class="progress-bar">
+          <div class="progress" data-progress="20%"></div>
+          <span class="progress-text"></span>
+        </div>
+        <p>Creating <span>interactive</span> experiences</p>
+      </div>
+      
+      <div class="skill-card">
+        <img src="reactjs.png" alt="React" class="skill-icon">
+        <h3>React JS</h3>
+        <div class="progress-bar">
+          <div class="progress" data-progress="5%"></div>
+          <span class="progress-text"></span>
+        </div>
+        <p><span>Building</span> user interface</p>
+      </div>
+    </div>
+    
+    <div class="resume">
+        <a href="JimDioquino_frontEnd_2025.pdf" class="btn" download>Download CV</a>
+    </div>   
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <div class="section-title">
+      <h2>My <span>Projects</span></h2>
+    </div>
+    <div class="projects-container">
+      <div class="coming-soon">
+        <div class="icon">📂</div>
+        <h3>Projects Folder</h3>
+        <p>No <span>existing</span> project</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="section-title">
+      <h2>My <span>Contact</span></h2>
+    </div>
+    <div class="contact-container">
+      <form class="contact-form">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <div class="info-item">
+          <h3>Email</h3>
+          <p><a href="mailto:jimreydioquino@gmail.com">jimreydioquino@gmail.com</a></p>
+        </div>
+        <div class="info-item">
+          <h3>Phone</h3>
+          <p>+63 956 768 2635</p>
+        </div>
+        <div class="info-item">
+          <h3>Location</h3>
+          <p>Taguig City, Philippines</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.facebook.com/share/14ETccXH2qu/" target="_blank" aria-label="Facebook">FB</a>
+      <a href="#" aria-label="LinkedIn">LI</a>      
+      <a href="#" aria-label="GitHub">GH</a>
+    </div>
+    <p>&copy; 2023 Jim Rey Dioquino. All rights reserved.</p>
+  </footer>
+
+  <script>    document.addEventListener('DOMContentLoaded', function() {
+      const progressBars = document.querySelectorAll('.progress');
+      
+      progressBars.forEach(bar => {
+        const progressValue = bar.getAttribute('data-progress');
+        const progressText = bar.nextElementSibling;
+        
+        // Set width and text
+        bar.style.width = progressValue;
+        progressText.textContent = progressValue;
+        
+        // Add animation
+        bar.style.animation = 'none';
+        setTimeout(() => {
+          bar.style.animation = '';
+        }, 10);
+      });
+    });
+  </script>
+</body>
+</html>
