@@ -1,0 +1,105 @@
+@media (max-width: 1024px) {
+  header img {
+    margin: 15px 30px;
+  }
+  header nav ul {
+    margin-right: 30px;
+  }
+  header nav li {
+    margin: 0 15px;
+    font-size: 18px;
+  }
+  .home {
+    margin: 0 5em;
+  }
+  .description {
+    max-width: 50%;
+  }
+  .skills, .projects, .contact {
+    padding: 4em 5em;
+  }
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+  }  
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  header img {
+    margin: 10px 0;
+  }
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 10px;
+  }
+  header nav li {
+    margin: 5px 10px;
+    font-size: 16px;
+  }
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em;
+    height: auto;
+    text-align: center;
+  }
+  .description {
+    padding: 1.5rem 0 0;
+    max-width: 100%;
+  }
+  .description .name {
+    font-size: 1.8rem;
+  }
+  .skills, .projects, .contact {
+    padding: 3em 2em;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .home {
+    margin: 0 2em;
+  }
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }  
+}
+
+@media (max-width: 480px) {
+  header nav li {
+    margin: 5px 6px;
+    font-size: 14px;
+  }
+  .home {
+    margin: 1em;
+  }
+  .description .name {
+    font-size: 1.5rem;
+  }
+  .description p {
+    font-size: 0.9rem;
+  }
+  .skills, .projects, .contact {
+    padding: 2em 1em;
+  }
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  .coming-soon {
+    padding: 1.5em;
+  }
+  .coming-soon h3 {
+    font-size: 1.5rem;
+  }
+  .coming-soon p {
+    font-size: 1rem;
+  }
+  .progress-bar {
+    height: 12px;
+  }
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
